@@ -3,7 +3,7 @@ import 'package:project__q/pages/choose_location.dart';
 import 'package:project__q/pages/home.dart';
 import 'package:project__q/pages/loading.dart';
 void main()=>runApp( MaterialApp(
-  initialRoute: '/home',
+  initialRoute: '/',
  
   routes: {
     '/':(context) => const Loading(),
