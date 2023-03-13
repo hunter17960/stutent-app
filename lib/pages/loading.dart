@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project__q/services/world_time.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class Loading extends StatefulWidget {
   const Loading({super.key});
@@ -20,6 +21,7 @@ class _LoadingState extends State<Loading> {
       'location':instance.location,
       'flag':instance.flag,
       'time':instance.time,
+      'isDaytime':instance.isDaytime,
 
     });
    
@@ -34,14 +36,16 @@ class _LoadingState extends State<Loading> {
   Widget build(BuildContext context) {
     // ignore: prefer_const_constructors
     return  Scaffold(
-      body:
       // ignore: prefer_const_constructors
-      Padding(
+      body:Center(
         // ignore: prefer_const_constructors
-        padding:EdgeInsets.all(50.0),
-        // ignore: prefer_const_constructors
-        child: Text('loading'),
+        child: SpinKitRing(
+          color: Colors.black,
+          size: 50.0,
         ),
+
+      ),
+     
         
     );
   }
